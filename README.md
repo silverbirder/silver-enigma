@@ -1,8 +1,11 @@
 # silver-enigma
 this repository is the tool to monitor the visual regression.
 
-## Usage
-### Prepare
+# Output
+![backstopjs](https://res.cloudinary.com/silverbirder/image/upload/v1573651959/backstopjs/backstopjs.png)
+
+# Usage
+## Prepare
 You just write the url you want to monitor in backstop.json (scenarios.url, scenarios.label).
 
 ex.
@@ -27,14 +30,14 @@ If you want to execute a specific script, add a key and value.
   ]
 ```
 
-### Test
+## Test
 ```bash
 $ npm install
 $ npm run reference
 $ npm test
 ```
 
-### CircleCI
+## CircleCI
 Set environments
 
 * VCS_TYPE
