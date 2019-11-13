@@ -11,6 +11,11 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: install fonts
           command: |
@@ -25,10 +30,6 @@ jobs:
                 echo "not before artifacts"
                 npm run reference
             fi
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
       - store_artifacts:
           path: backstop_data/bitmaps_test/
