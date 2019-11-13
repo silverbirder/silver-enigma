@@ -1,0 +1,28 @@
+{
+  "name": "silver-enigma",
+  "version": "1.0.0",
+  "description": "this repository is the tool to monitor the visual regression.",
+  "main": "index.js",
+  "scripts": {
+    "reference": "./node_modules/backstopjs/cli/index.js reference",
+    "test": "./node_modules/backstopjs/cli/index.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silver-birder/silver-enigma.git"
+  },
+  "keywords": [
+    "circleCI",
+    "backstopjs",
+    "puppeteer"
+  ],
+  "author": "silverbirder <silverbirder@gmail.com> (https://silver-birder.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Silver-birder/silver-enigma/issues"
+  },
+  "homepage": "https://github.com/Silver-birder/silver-enigma#readme",
+  "dependencies": {
+    "backstopjs": "^4.3.2"
+  }
+}

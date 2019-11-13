@@ -1,0 +1,40 @@
+{
+  "id": "silver-enigma",
+  "viewports": [
+    {
+      "label": "sp",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "pc",
+      "width": 640,
+      "height": 400
+    }
+  ],
+  "onBeforeScript": "puppet/onCommonBefore.js",
+  "onReadyScript": "puppet/onCommonReady.js",
+  "scenarios": [
+    {
+      "label": "search_by_keyword",
+      "url": "https://www.amazon.co.jp/s?k=github",
+      "onReadyScript": "puppet/onReadyInSearch.js"
+    },
+    {
+      "label": "search_by_category",
+      "url": "https://www.amazon.co.jp/s?i=stripbooks"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser", "CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+  }
+}
